@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "15fb6882ce3c3cf305355ee1781b1206",
+    "content-hash": "1d15416514329d156af3480a0c884b23",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -6128,6 +6128,76 @@
             "time": "2021-07-31T17:03:58+00:00"
         },
         {
+            "name": "dealerdirect/phpcodesniffer-composer-installer",
+            "version": "v0.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Dealerdirect/phpcodesniffer-composer-installer.git",
+                "reference": "fe390591e0241955f22eb9ba327d137e501c771c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Dealerdirect/phpcodesniffer-composer-installer/zipball/fe390591e0241955f22eb9ba327d137e501c771c",
+                "reference": "fe390591e0241955f22eb9ba327d137e501c771c",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0 || ^2.0",
+                "php": ">=5.3",
+                "squizlabs/php_codesniffer": "^2.0 || ^3.0 || ^4.0"
+            },
+            "require-dev": {
+                "composer/composer": "*",
+                "phpcompatibility/php-compatibility": "^9.0",
+                "sensiolabs/security-checker": "^4.1.0"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Franck Nijhof",
+                    "email": "franck.nijhof@dealerdirect.com",
+                    "homepage": "http://www.frenck.nl",
+                    "role": "Developer / IT Manager"
+                }
+            ],
+            "description": "PHP_CodeSniffer Standards Composer Installer Plugin",
+            "homepage": "http://www.dealerdirect.com",
+            "keywords": [
+                "PHPCodeSniffer",
+                "PHP_CodeSniffer",
+                "code quality",
+                "codesniffer",
+                "composer",
+                "installer",
+                "phpcs",
+                "plugin",
+                "qa",
+                "quality",
+                "standard",
+                "standards",
+                "style guide",
+                "stylecheck",
+                "tests"
+            ],
+            "support": {
+                "issues": "https://github.com/dealerdirect/phpcodesniffer-composer-installer/issues",
+                "source": "https://github.com/dealerdirect/phpcodesniffer-composer-installer"
+            },
+            "time": "2020-12-07T18:04:37+00:00"
+        },
+        {
             "name": "doctrine/cache",
             "version": "2.1.1",
             "source": {
@@ -6924,6 +6994,101 @@
             "time": "2020-07-09T08:09:16+00:00"
         },
         {
+            "name": "jumptwentyfour/laravel-coding-standards",
+            "version": "v0.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JumpTwentyFour/laravel-coding-standards.git",
+                "reference": "f8a1974a996597436e2d7c2f76f6a43603f9c579"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JumpTwentyFour/laravel-coding-standards/zipball/f8a1974a996597436e2d7c2f76f6a43603f9c579",
+                "reference": "f8a1974a996597436e2d7c2f76f6a43603f9c579",
+                "shasum": ""
+            },
+            "require": {
+                "jumptwentyfour/php-coding-standards": "^1.0",
+                "laravel/framework": "^6.0|^7.0|^8.0",
+                "nikic/php-parser": "^4.0",
+                "nunomaduro/larastan": "^1.0.0",
+                "php": "^7.2|^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.3 || ^8.2 || ^9.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "JumpTwentyFour\\LaravelCodingStandards\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alex Williams",
+                    "email": "alex@jump24.co.uk",
+                    "homepage": "https://jump24.co.uk",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Daniel Newns",
+                    "email": "dan@jump24.co.uk",
+                    "homepage": "https://jump24.co.uk",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Coding standards for our PHP applications.",
+            "support": {
+                "issues": "https://github.com/JumpTwentyFour/laravel-coding-standards/issues",
+                "source": "https://github.com/JumpTwentyFour/laravel-coding-standards/tree/v0.0.3"
+            },
+            "time": "2021-11-01T16:04:52+00:00"
+        },
+        {
+            "name": "jumptwentyfour/php-coding-standards",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JumpTwentyFour/php-coding-standards.git",
+                "reference": "4601d5428e44eef3ba60e51e913b60a677814ff5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JumpTwentyFour/php-coding-standards/zipball/4601d5428e44eef3ba60e51e913b60a677814ff5",
+                "reference": "4601d5428e44eef3ba60e51e913b60a677814ff5",
+                "shasum": ""
+            },
+            "require": {
+                "nikic/php-parser": "^4.0",
+                "php": "^7.2|^8.0",
+                "slevomat/coding-standard": "^7.0",
+                "symplify/easy-coding-standard": "^9.1"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alex Williams",
+                    "email": "alex@jump24.co.uk",
+                    "homepage": "https://jump24.co.uk",
+                    "role": "Lead Developer"
+                }
+            ],
+            "description": "Coding standards for our PHP applications.",
+            "support": {
+                "issues": "https://github.com/JumpTwentyFour/php-coding-standards/issues",
+                "source": "https://github.com/JumpTwentyFour/php-coding-standards/tree/1.0.2"
+            },
+            "time": "2021-06-09T12:43:22+00:00"
+        },
+        {
             "name": "justinrainbow/json-schema",
             "version": "5.2.11",
             "source": {
@@ -7271,6 +7436,104 @@
             "time": "2021-09-20T15:06:32+00:00"
         },
         {
+            "name": "nunomaduro/larastan",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nunomaduro/larastan.git",
+                "reference": "a2db0456e484ac68ba23329ba39cb93197cec7c7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nunomaduro/larastan/zipball/a2db0456e484ac68ba23329ba39cb93197cec7c7",
+                "reference": "a2db0456e484ac68ba23329ba39cb93197cec7c7",
+                "shasum": ""
+            },
+            "require": {
+                "composer/composer": "^1.0 || ^2.0",
+                "ext-json": "*",
+                "illuminate/console": "^6.0 || ^7.0 || ^8.0 || ^9.0",
+                "illuminate/container": "^6.0 || ^7.0 || ^8.0 || ^9.0",
+                "illuminate/contracts": "^6.0 || ^7.0 || ^8.0 || ^9.0",
+                "illuminate/database": "^6.0 || ^7.0 || ^8.0 || ^9.0",
+                "illuminate/http": "^6.0 || ^7.0 || ^8.0 || ^9.0",
+                "illuminate/pipeline": "^6.0 || ^7.0 || ^8.0 || ^9.0",
+                "illuminate/support": "^6.0 || ^7.0 || ^8.0 || ^9.0",
+                "mockery/mockery": "^0.9 || ^1.0",
+                "php": "^7.2 || ^8.0",
+                "phpstan/phpstan": "^1.0",
+                "symfony/process": "^4.3 || ^5.0 || ^6.0"
+            },
+            "require-dev": {
+                "nikic/php-parser": "^4.13.0",
+                "orchestra/testbench": "^4.0 || ^5.0 || ^6.0 || ^7.0",
+                "phpunit/phpunit": "^7.3 || ^8.2 || ^9.3"
+            },
+            "suggest": {
+                "orchestra/testbench": "Using Larastan for analysing a package needs Testbench"
+            },
+            "type": "phpstan-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                },
+                "phpstan": {
+                    "includes": [
+                        "extension.neon"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "NunoMaduro\\Larastan\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nuno Maduro",
+                    "email": "enunomaduro@gmail.com"
+                }
+            ],
+            "description": "Larastan - Discover bugs in your code without running it. A phpstan/phpstan wrapper for Laravel",
+            "keywords": [
+                "PHPStan",
+                "code analyse",
+                "code analysis",
+                "larastan",
+                "laravel",
+                "package",
+                "php",
+                "static analysis"
+            ],
+            "support": {
+                "issues": "https://github.com/nunomaduro/larastan/issues",
+                "source": "https://github.com/nunomaduro/larastan/tree/1.0.1"
+            },
+            "funding": [
+                {
+                    "url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=66BYDWAT92N6L",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/canvural",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nunomaduro",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/nunomaduro",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2021-11-06T21:03:02+00:00"
+        },
+        {
             "name": "phar-io/manifest",
             "version": "2.0.3",
             "source": {
@@ -7607,6 +7870,119 @@
                 "source": "https://github.com/phpspec/prophecy/tree/1.14.0"
             },
             "time": "2021-09-10T09:02:12+00:00"
+        },
+        {
+            "name": "phpstan/phpdoc-parser",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpstan/phpdoc-parser.git",
+                "reference": "dbc093d7af60eff5cd575d2ed761b15ed40bd08e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/dbc093d7af60eff5cd575d2ed761b15ed40bd08e",
+                "reference": "dbc093d7af60eff5cd575d2ed761b15ed40bd08e",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1 || ^8.0"
+            },
+            "require-dev": {
+                "php-parallel-lint/php-parallel-lint": "^1.2",
+                "phpstan/extension-installer": "^1.0",
+                "phpstan/phpstan": "^1.0",
+                "phpstan/phpstan-strict-rules": "^1.0",
+                "phpunit/phpunit": "^9.5",
+                "symfony/process": "^5.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PHPStan\\PhpDocParser\\": [
+                        "src/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHPDoc parser with support for nullable, intersection and generic types",
+            "support": {
+                "issues": "https://github.com/phpstan/phpdoc-parser/issues",
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.2.0"
+            },
+            "time": "2021-09-16T20:46:02+00:00"
+        },
+        {
+            "name": "phpstan/phpstan",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpstan/phpstan.git",
+                "reference": "cb317029197236c571c1b9305b8dd12850d8d85c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/cb317029197236c571c1b9305b8dd12850d8d85c",
+                "reference": "cb317029197236c571c1b9305b8dd12850d8d85c",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1|^8.0"
+            },
+            "conflict": {
+                "phpstan/phpstan-shim": "*"
+            },
+            "bin": [
+                "phpstan",
+                "phpstan.phar"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHPStan - PHP Static Analysis Tool",
+            "support": {
+                "issues": "https://github.com/phpstan/phpstan/issues",
+                "source": "https://github.com/phpstan/phpstan/tree/1.1.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/ondrejmirtes",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/phpstan",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/phpstan",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/phpstan/phpstan",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-11-06T22:46:47+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -9155,6 +9531,123 @@
             "time": "2021-08-19T21:01:38+00:00"
         },
         {
+            "name": "slevomat/coding-standard",
+            "version": "7.0.16",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/slevomat/coding-standard.git",
+                "reference": "14c324b2f2f0072933036c2f3abaeda16a56dcd3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/slevomat/coding-standard/zipball/14c324b2f2f0072933036c2f3abaeda16a56dcd3",
+                "reference": "14c324b2f2f0072933036c2f3abaeda16a56dcd3",
+                "shasum": ""
+            },
+            "require": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.6.2 || ^0.7",
+                "php": "^7.1 || ^8.0",
+                "phpstan/phpdoc-parser": "^1.0.0",
+                "squizlabs/php_codesniffer": "^3.6.1"
+            },
+            "require-dev": {
+                "phing/phing": "2.17.0",
+                "php-parallel-lint/php-parallel-lint": "1.3.1",
+                "phpstan/phpstan": "0.12.99",
+                "phpstan/phpstan-deprecation-rules": "0.12.6",
+                "phpstan/phpstan-phpunit": "0.12.22",
+                "phpstan/phpstan-strict-rules": "0.12.11",
+                "phpunit/phpunit": "7.5.20|8.5.5|9.5.10"
+            },
+            "type": "phpcodesniffer-standard",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "7.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SlevomatCodingStandard\\": "SlevomatCodingStandard"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Slevomat Coding Standard for PHP_CodeSniffer complements Consistence Coding Standard by providing sniffs with additional checks.",
+            "support": {
+                "issues": "https://github.com/slevomat/coding-standard/issues",
+                "source": "https://github.com/slevomat/coding-standard/tree/7.0.16"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/kukulich",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/slevomat/coding-standard",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-10-22T06:56:51+00:00"
+        },
+        {
+            "name": "squizlabs/php_codesniffer",
+            "version": "3.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
+                "reference": "f268ca40d54617c6e06757f83f699775c9b3ff2e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/f268ca40d54617c6e06757f83f699775c9b3ff2e",
+                "reference": "f268ca40d54617c6e06757f83f699775c9b3ff2e",
+                "shasum": ""
+            },
+            "require": {
+                "ext-simplexml": "*",
+                "ext-tokenizer": "*",
+                "ext-xmlwriter": "*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.0 || ^5.0 || ^6.0 || ^7.0"
+            },
+            "bin": [
+                "bin/phpcs",
+                "bin/phpcbf"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Greg Sherwood",
+                    "role": "lead"
+                }
+            ],
+            "description": "PHP_CodeSniffer tokenizes PHP, JavaScript and CSS files and detects violations of a defined set of coding standards.",
+            "homepage": "https://github.com/squizlabs/PHP_CodeSniffer",
+            "keywords": [
+                "phpcs",
+                "standards"
+            ],
+            "support": {
+                "issues": "https://github.com/squizlabs/PHP_CodeSniffer/issues",
+                "source": "https://github.com/squizlabs/PHP_CodeSniffer",
+                "wiki": "https://github.com/squizlabs/PHP_CodeSniffer/wiki"
+            },
+            "time": "2021-10-11T04:00:11+00:00"
+        },
+        {
             "name": "symfony/filesystem",
             "version": "v5.3.4",
             "source": {
@@ -9216,6 +9709,61 @@
                 }
             ],
             "time": "2021-07-21T12:40:44+00:00"
+        },
+        {
+            "name": "symplify/easy-coding-standard",
+            "version": "9.4.70",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symplify/easy-coding-standard.git",
+                "reference": "9276b0c7a1a5671fc4a067656ab40d0aea42aaca"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symplify/easy-coding-standard/zipball/9276b0c7a1a5671fc4a067656ab40d0aea42aaca",
+                "reference": "9276b0c7a1a5671fc4a067656ab40d0aea42aaca",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "conflict": {
+                "friendsofphp/php-cs-fixer": "<3.0",
+                "squizlabs/php_codesniffer": "<3.6"
+            },
+            "bin": [
+                "bin/ecs"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "9.5-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Prefixed scoped version of ECS package",
+            "support": {
+                "source": "https://github.com/symplify/easy-coding-standard/tree/9.4.70"
+            },
+            "funding": [
+                {
+                    "url": "https://www.paypal.me/rectorphp",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/tomasvotruba",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-10-02T16:09:04+00:00"
         },
         {
             "name": "theseer/tokenizer",
