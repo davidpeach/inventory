@@ -11,7 +11,11 @@ class SearchController
 {
     public function index(Request $request)
     {
-        $items = Item::where(column: 'name', operator: '=', value: $request->get(key: 'q'))->get();
+        $items = Item::where(
+            column: 'name',
+            operator: 'LIKE',
+            value: $request->get(key: 'q') . '%'
+        )->get();
 
         return FoundItemsResource::collection($items);
     }
