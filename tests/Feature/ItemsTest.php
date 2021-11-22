@@ -4,6 +4,7 @@ namespace Tests\Feature;
 
 use App\Models\Item;
 use App\Models\Location;
+use Faker\Provider\Uuid;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
@@ -14,24 +15,30 @@ class ItemsTest extends TestCase
     /**
      * @test
      */
-    public function an_item_can_be_found_by_its_full_name()
+    public function an_item_can_be_found_by_its_exact_full_name()
     {
-        // GIVEN I have an item...
+        $uuid = Uuid::uuid();
         $item = Item::factory()->create([
+            'uuid' => $uuid,
             'name' => 'My stored item',
         ]);
 
-        // ...that is stored in a known location.
-        $location = Location::factory()->create([
+        Location::factory()->create([
             'name' => 'My location',
         ]);
 
+        $location = Location::first();
         $location->store(item: $item);
 
-        // WHEN I search for that item by name.
-        $this->assertTrue(condition: true);
+        $response = $this->get(uri: $this->api_base . '/search?q=My stored item');
 
-        // THEN I should be given the correct location.
+        $response->assertJson(value: ['data' => [[
+            'id' => $uuid,
+            'name' => 'My stored item',
+            'location' => [
+                'name' => 'My location',
+            ],
+        ]]]);
     }
 
     /**

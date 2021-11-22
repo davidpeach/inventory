@@ -15,6 +15,7 @@ class CreateItemsTable extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->id();
+            $table->uuid(column: 'uuid');
             $table->string(column: 'name');
             $table->unsignedBigInteger(column: 'location_id')->nullable();
             $table->timestamps();
