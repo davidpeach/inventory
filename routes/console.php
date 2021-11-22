@@ -14,21 +14,3 @@ use Illuminate\Support\Facades\Artisan;
 | simple approach to interacting with each command's IO methods.
 |
 */
-
-Artisan::command(signature: 'item:add {name}', callback: function () {
-
-    Item::create([
-        'name' => $this->argument('name'),
-    ]);
-
-})->purpose(description: 'Add a new item');
-
-Artisan::command(signature: 'item:search {name}', callback: function () {
-
-    $item = Item::where([
-        'name' => $this->argument('name'),
-    ])->first();
-
-    $this->info($item->location->name);
-
-})->purpose(description: 'Search for an new item');
