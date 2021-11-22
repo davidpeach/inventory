@@ -1,2 +1,4 @@
 includes:
     - ./vendor/jumptwentyfour/laravel-coding-standards/phpstan.neon
+parameters:
+    level: 9

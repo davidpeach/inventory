@@ -50,9 +50,10 @@ class RouteServiceProvider extends ServiceProvider
     /**
      * Configure the rate limiters for the application.
      */
-    protected function configureRateLimiting()
+    protected function configureRateLimiting(): void
     {
         RateLimiter::for('api', function (Request $request) {
+            /** @phpstan-ignore-next-line */
             return Limit::perMinute(60)->by(optional($request->user())->id ?: $request->ip());
         });
     }

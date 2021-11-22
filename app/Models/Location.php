@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -10,7 +12,7 @@ class Location extends Model
 {
     use HasFactory;
 
-    public function store(Item $item)
+    public function store(Item $item): void
     {
         $item->update([
             'location_id' => $this->id,

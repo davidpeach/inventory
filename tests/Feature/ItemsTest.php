@@ -39,7 +39,7 @@ class ItemsTest extends TestCase
                 'location' => [
                     'name' => 'My location',
                 ],
-            ]]
+            ]],
         ]);
     }
 
@@ -70,7 +70,7 @@ class ItemsTest extends TestCase
                 'location' => [
                     'name' => 'My location',
                 ],
-            ]]
+            ]],
         ]);
     }
 
@@ -101,7 +101,7 @@ class ItemsTest extends TestCase
                 'location' => [
                     'name' => 'My location',
                 ],
-            ]]
+            ]],
         ]);
     }
 
