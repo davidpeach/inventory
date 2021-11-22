@@ -32,13 +32,15 @@ class ItemsTest extends TestCase
 
         $response = $this->get(uri: $this->api_base . '/search?q=My stored item');
 
-        $response->assertJson(value: ['data' => [[
-            'id' => $uuid,
-            'name' => 'My stored item',
-            'location' => [
-                'name' => 'My location',
-            ],
-        ]]]);
+        $response->assertJson(value: [
+            'data' => [[
+                'id' => $uuid,
+                'name' => 'My stored item',
+                'location' => [
+                    'name' => 'My location',
+                ],
+            ]]
+        ]);
     }
 
     /**
@@ -61,13 +63,46 @@ class ItemsTest extends TestCase
 
         $response = $this->get(uri: $this->api_base . '/search?q=My stor');
 
-        $response->assertJson(value: ['data' => [[
-            'id' => $uuid,
+        $response->assertJson(value: [
+            'data' => [[
+                'id' => $uuid,
+                'name' => 'My stored item',
+                'location' => [
+                    'name' => 'My location',
+                ],
+            ]]
+        ]);
+    }
+
+    /**
+     * @test
+     */
+    public function an_item_can_be_found_by_searching_the_end_of_its_name()
+    {
+        $uuid = Uuid::uuid();
+        $item = Item::factory()->create([
+            'uuid' => $uuid,
             'name' => 'My stored item',
-            'location' => [
-                'name' => 'My location',
-            ],
-        ]]]);
+        ]);
+
+        Location::factory()->create([
+            'name' => 'My location',
+        ]);
+
+        $location = Location::first();
+        $location->store(item: $item);
+
+        $response = $this->get(uri: $this->api_base . '/search?q=stored item');
+
+        $response->assertJson(value: [
+            'data' => [[
+                'id' => $uuid,
+                'name' => 'My stored item',
+                'location' => [
+                    'name' => 'My location',
+                ],
+            ]]
+        ]);
     }
 
     /**
