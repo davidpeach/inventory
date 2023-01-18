@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 use App\Models\Inventory;
 
 test('inventory items can be created', function () {
