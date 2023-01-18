@@ -8,3 +8,8 @@ parameters:
 
     # Level 9 is the highest level
     level: 9
+
+    ignoreErrors:
+        -
+            message: '#Method [a-zA-Z0-9\\_]+::passwordRules\(\) return type has no value type specified in iterable type array.#'
+            path: app/Actions/Fortify/*
