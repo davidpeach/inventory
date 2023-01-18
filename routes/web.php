@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Inventory\IndexController;
+use App\Http\Controllers\Inventory\StoreController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -8,6 +9,7 @@ Route::get('/', function () {
 });
 
 Route::get('inventory', IndexController::class)->name('inventory.index');
+Route::post('inventory', StoreController::class)->name('inventory.store');
 
 Route::middleware([
     'auth:sanctum',
