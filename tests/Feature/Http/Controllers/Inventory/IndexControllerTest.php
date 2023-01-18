@@ -2,19 +2,9 @@
 
 declare(strict_types = 1);
 
-namespace Tests\Feature\Http\Controllers\Inventory;
-
 use App\Models\Inventory;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Tests\TestCase;
 
-class IndexControllerTest extends TestCase
-{
-    use RefreshDatabase;
-
-    /** @test */
-    public function the_inventory_list_can_be_returned(): void
-    {
+test('the inventory list can be returned', function () {
         [$itemA, $itemB, $itemC] = Inventory::factory()->count(3)->create();
 
         $response = $this->get(route(name: 'inventory.index'));
@@ -31,5 +21,5 @@ class IndexControllerTest extends TestCase
                 'name' => $itemC->name,
             ],
         ]]);
-    }
-}
+});
+
