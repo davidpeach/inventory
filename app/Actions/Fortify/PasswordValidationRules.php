@@ -13,6 +13,7 @@ trait PasswordValidationRules
      */
     protected function passwordRules(): array
     {
+        /** @phpstan-ignore-next-line */
         return ['required', 'string', new Password, 'confirmed'];
     }
 }
