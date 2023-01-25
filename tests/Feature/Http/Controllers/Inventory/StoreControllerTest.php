@@ -3,9 +3,12 @@
 declare(strict_types = 1);
 
 use App\Models\Inventory;
+use App\Models\User;
 
 test('inventory items can be created', function () {
-    $response = $this->postJson(route(name: 'inventory.store'), [
+    $user = User::factory()->create();
+
+    $response = $this->actingAs($user)->postJson(route(name: 'inventory.store'), [
         'name' => 'My Special Item',
     ]);
 
@@ -13,6 +16,7 @@ test('inventory items can be created', function () {
 
     $this->assertDatabaseHas(Inventory::class, [
         'name' => 'My Special Item',
+        'user_id' => $user->id,
     ]);
 });
 
