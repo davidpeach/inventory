@@ -8,8 +8,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('inventory', IndexController::class)->name('inventory.index');
-Route::post('inventory', StoreController::class)->name('inventory.store');
+Route::middleware(['auth:sanctum'])-> group(function () {
+    Route::get('inventory', IndexController::class)->name('inventory.index');
+    Route::post('inventory', StoreController::class)->name('inventory.store');
+});
 
 Route::middleware([
     'auth:sanctum',

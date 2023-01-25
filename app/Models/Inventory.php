@@ -35,6 +35,7 @@ class Inventory extends Model
 
     public function owner(): BelongsTo
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(related: User::class, foreignKey: 'user_id');
     }
 }
+

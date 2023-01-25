@@ -13,11 +13,9 @@ class StoreController
 {
     public function __invoke(InventoryStoreRequest $request): Response|ResponseFactory
     {
-        $in = Inventory::create([
+        Inventory::make([
             'name' => $request->name,
-        ]);
-
-        $in->owner()->associate(auth()->user());
+        ])->owner()->associate(auth()->user())->save();
 
         return response(content: 'Inventory item created', status: 201);
     }
