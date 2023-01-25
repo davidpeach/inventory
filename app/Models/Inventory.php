@@ -8,7 +8,21 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 /**
+ * App\Models\Inventory
+ *
  * @property string $name
+ * @property int $id
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Database\Factories\InventoryFactory factory(...$parameters)
+ * @method static \Illuminate\Database\Eloquent\Builder|Inventory newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Inventory newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Inventory query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Inventory whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Inventory whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Inventory whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Inventory whereUpdatedAt($value)
+ * @mixin \Eloquent
  */
 class Inventory extends Model
 {
